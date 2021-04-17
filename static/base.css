@@ -1,0 +1,15 @@
+.log {
+    font-family: 'Orelega One', cursive;
+}
+
+.footer_button {
+    font-size:0.6rem;
+}
+
+.header {
+    text-align: center; margin: 1rem 0;
+}
+
+.footer {
+    text-align: center; margin-top: 1rem;
+}
