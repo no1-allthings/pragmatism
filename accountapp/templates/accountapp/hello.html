@@ -12,8 +12,10 @@
             <input type="submit" class="btn btn-primary" value="post">
         </form>
 
-        {% if hello_output %}
-        <h3>{{hello_output.text}}</h3>
+        {% if hello_list %}
+            {% for hello in hello_list %}
+            <h6>{{hello.text}}</h6>
+            {% endfor %}
         {% endif %}
 
     </div>
