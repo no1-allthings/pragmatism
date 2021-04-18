@@ -2,16 +2,19 @@
 
 {% block content %}
 
-    <div style="height: 20rem; background-color: #38df81; border-radius:1rem; margin: 2rem;">
+    <div style="text-align: center; border-radius:1rem; margin: 2rem;">
 
-        <h3>Hi!</h3>
+        <h3 class="log">Hello List!</h3>
 
         <form action="/account/hello/" method="POST">
             {% csrf_token %}
+            <input type="text" name="hello_input">
             <input type="submit" class="btn btn-primary" value="post">
         </form>
 
-        <h3>{{te}}</h3>
+        {% if hello_output %}
+        <h3>{{hello_output.text}}</h3>
+        {% endif %}
 
     </div>
 
