@@ -9,7 +9,17 @@
             <span>nav1</span>
             <span>nav2</span>
             <span>nav2</span>
-            <span>nav</span>
+            {% if not user.is_authenticated %}
+                 <a href="{% url 'accountapp:login' %}?next={{request.path}}">
+                    <span>LOGIN</span>
+                 </a>
+            {% else %}
+                 <a href="{% url 'accountapp:logout' %}?next={{request.path}}">
+                    <span>LOGOUT</span>
+                 </a>
+            {% endif %}
+
+
         </div>
 
     </div>
