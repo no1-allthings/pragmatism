@@ -6,6 +6,13 @@
 
         <h3>Hi!</h3>
 
+        <form action="/account/hello/" method="POST">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="post">
+        </form>
+
+        <h3>{{te}}</h3>
+
     </div>
 
 {% endblock %}
